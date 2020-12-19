@@ -1,0 +1,39 @@
+.form-input {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: rgb(218, 202, 202);
+  font-size: 15px;
+  border: none;
+  padding-left: 10px;
+  margin: 10px;
+  outline: none;
+}
+.form-input:hover {
+  background-color: rgb(222, 206, 220);
+  border: none;
+  outline: none;
+}
+.form-input:focus {
+  border: none;
+  outline: none;
+}
+
+.form-button {
+  width: 200px;
+  height: 40px;
+  background-color: rgb(89, 124, 49);
+  font-size: 18px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 5px 0px #ecf1ef;
+  position: relative;
+  top: 0px;
+  transition: all ease 0.3s;
+}
+.form-button:active {
+  box-shadow: 0 3px 0 #567c68;
+  top: 3px;
+}

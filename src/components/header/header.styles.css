@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav-links {
+  list-style: none;
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  font-size: 18px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
