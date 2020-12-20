@@ -24,6 +24,7 @@ const AppReducer = (state, action) => {
         ...state,
         watched: state.watched.filter((movie) => movie.id !== action.payload),
       };
+
     default:
       return state;
   }

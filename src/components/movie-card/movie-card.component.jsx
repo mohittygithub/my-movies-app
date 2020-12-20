@@ -3,12 +3,13 @@ import { GlobalContext } from "../../context/GlobalState";
 import FormInput from "../form-input/form-input.component";
 import "./movie-card.styles.css";
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, ...otherProps }) => {
   // getting actions from GlobalState
   const {
     addToWatchList,
     removeFromWatchList,
     addToWatched,
+    removeFromWatched,
     watchList,
     watched,
   } = useContext(GlobalContext);
@@ -25,7 +26,9 @@ const MovieCard = ({ movie }) => {
     : false;
 
   const disableWatchedMovieButton = watchedMovie ? true : false;
-
+  const handleClick = () => {
+    addToWatchList(movie);
+  };
   return (
     <div className="movie-card">
       {movie.poster_path ? (
@@ -45,7 +48,10 @@ const MovieCard = ({ movie }) => {
           type="button"
           value="Add To WatchList"
           disabled={disableAddMovieButton}
-          onClick={() => addToWatchList(movie)}
+          onClick={
+            handleClick
+            // addToWatchList(movie);
+          }
         />
         <FormInput
           type="button"
@@ -56,6 +62,16 @@ const MovieCard = ({ movie }) => {
             removeFromWatchList(movie.id);
           }}
         />
+        {!otherProps.noRemoveButton ? (
+          <FormInput
+            type="button"
+            value="Remove"
+            onClick={() => {
+              removeFromWatched(movie.id);
+              removeFromWatchList(movie.id);
+            }}
+          />
+        ) : null}
       </div>
     </div>
   );

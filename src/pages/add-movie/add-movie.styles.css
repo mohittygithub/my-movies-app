@@ -1,6 +1,12 @@
 .add-movie {
   display: flex;
   flex-direction: column;
+  padding-top: 100px;
+}
+.page-top {
+  text-align: center !important;
+}
+.movie-list {
+  display: flex;
   align-items: center;
-  margin-top: 50px;
 }

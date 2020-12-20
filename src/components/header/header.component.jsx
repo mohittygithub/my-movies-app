@@ -1,24 +1,31 @@
 import React from "react";
 import "./header.styles.css";
 import { Link } from "react-router-dom";
+import FormInput from "../form-input/form-input.component";
 
 const Header = () => {
   return (
     <div className="container">
       <div className="brand">
         <h1>
-          <Link to="/">Brand</Link>
+          <Link to="/">Movie-Watchlist</Link>
         </h1>
       </div>
       <ul className="nav-links">
         <li>
-          <Link to="/watchlist">WatchList</Link>
+          <Link to="/watchlist">
+            <FormInput type="button" value="WatchList" />
+          </Link>
         </li>
         <li>
-          <Link to="/watched">Watched</Link>
+          <Link to="/watched">
+            <FormInput type="button" value="Watched" />
+          </Link>
         </li>
         <li>
-          <Link to="/add">Add</Link>
+          <Link to="/add">
+            <FormInput type="button" value="+ Add" />
+          </Link>
         </li>
       </ul>
     </div>

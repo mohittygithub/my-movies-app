@@ -9,9 +9,9 @@ const Watched = () => {
 
   return (
     <div className="watched-list">
-      <h1>Watched Movies List</h1>
+      <h1 className="page-title">Watched Movies</h1>
       {watched.map((movie) => (
-        <MovieCard movie={movie} />
+        <MovieCard movie={movie} key={movie.id} />
       ))}
     </div>
   );

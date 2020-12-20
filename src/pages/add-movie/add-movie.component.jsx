@@ -29,16 +29,20 @@ const AddMovie = () => {
   };
   return (
     <div className="add-movie">
-      <h1>Add Movies to Watch List</h1>
-      <FormInput
-        type="text"
-        placeholder="search movies here..."
-        onChange={handleChange}
-      />
+      <div className="page-top">
+        <h1>Add Movies to Watch List</h1>
+        <FormInput
+          type="text"
+          placeholder="search movies here..."
+          onChange={handleChange}
+        />
+      </div>
       <div className="movie-list">
         <ul>
           {movies.length > 0 &&
-            movies.map((movie) => <MovieCard movie={movie} />)}
+            movies.map((movie) => (
+              <MovieCard movie={movie} key={movie.id} noRemoveButton />
+            ))}
         </ul>
       </div>
     </div>

@@ -9,8 +9,9 @@ const WatchList = () => {
 
   return (
     <div className="watch-list">
+      <h1 className="page-title">Movie WatchList</h1>
       {watchList.map((movie) => (
-        <MovieCard movie={movie} />
+        <MovieCard movie={movie} key={movie.id} />
       ))}
     </div>
   );
