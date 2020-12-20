@@ -13,7 +13,7 @@ const Header = () => {
       </div>
       <ul className="nav-links">
         <li>
-          <Link to="/watchlist">
+          <Link to="/">
             <FormInput type="button" value="WatchList" />
           </Link>
         </li>

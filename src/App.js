@@ -18,7 +18,6 @@ function App() {
           <Route path="/login" component={LoginPage} />
           <Route exact path="/" component={WatchList} />
           <Route path="/add" component={AddMovie} />
-          <Route path="/watchlist" component={WatchList} />
           <Route path="/watched" component={Watched} />
         </Switch>
       </BrowserRouter>
