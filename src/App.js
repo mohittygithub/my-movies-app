@@ -7,6 +7,7 @@ import WatchList from "./pages/watch-list/watch-list.component";
 import AddMovie from "./pages/add-movie/add-movie.component";
 import Header from "./components/header/header.component";
 import Watched from "./pages/watched-list/watched-list.component";
+import LoginPage from "./pages/login-signup/login-signup.component";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Switch>
+          <Route path="/login" component={LoginPage} />
           <Route exact path="/" component={WatchList} />
           <Route path="/add" component={AddMovie} />
           <Route path="/watchlist" component={WatchList} />
