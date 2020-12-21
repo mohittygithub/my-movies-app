@@ -1,13 +1,13 @@
-import "./App.css";
-import { Switch, Route } from "react-router-dom";
+import './App.css'
+import { Switch, Route } from 'react-router-dom'
 
-import { BrowserRouter } from "react-router-dom";
-import { GlobalProvider } from "./context/GlobalState";
-import WatchList from "./pages/watch-list/watch-list.component";
-import AddMovie from "./pages/add-movie/add-movie.component";
-import Header from "./components/header/header.component";
-import Watched from "./pages/watched-list/watched-list.component";
-import LoginPage from "./pages/login-signup/login-signup.component";
+import { BrowserRouter } from 'react-router-dom'
+import { GlobalProvider } from './context/GlobalState'
+import WatchList from './pages/watch-list/watch-list.component'
+import AddMovie from './pages/add-movie/add-movie.component'
+import Header from './components/header/header.component'
+import Watched from './pages/watched-list/watched-list.component'
+import SigninSignupPage from './pages/signin-signup/signin-signup.component'
 
 function App() {
   return (
@@ -15,14 +15,14 @@ function App() {
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route path="/login" component={LoginPage} />
-          <Route exact path="/" component={WatchList} />
-          <Route path="/add" component={AddMovie} />
-          <Route path="/watched" component={Watched} />
+          <Route exact path='/' component={SigninSignupPage} />
+          <Route path='/watchlist' component={WatchList} />
+          <Route path='/add' component={AddMovie} />
+          <Route path='/watched' component={Watched} />
         </Switch>
       </BrowserRouter>
     </GlobalProvider>
-  );
+  )
 }
 
-export default App;
+export default App
