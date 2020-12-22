@@ -9,12 +9,6 @@ const SigninSignupPage = () => {
   const [signUp, setSignUp] = useState(false);
   // const handleClick = (e) => {
   //   e.preventDefault();
-
-  //   if (e.target.name === "signup") {
-  //     setSignUp(true);
-  //   } else {
-  //     setSignUp(false);
-  //   }
   // };
   return !signUp ? (
     <div className="main">
